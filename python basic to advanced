@@ -1,0 +1,398 @@
+## 🐍 Python Notes
+
+1. Python Basics
+2. Control Flow
+3. Functions
+4. Data Structures
+5. Machine Learning
+6. APIs
+7. Web Scraping
+
+---
+
+## 📘 Python Notes for Data Science Students
+
+---
+
+### ✅ 1. **Basics**
+
+#### 🔹 Example 1: Variable Assignment
+
+```python
+x = 42
+name = "Alice"
+pi = 3.1415
+```
+
+#### 🔹 Example 2: Basic Math Operations
+
+```python
+a = 10
+b = 3
+print(a + b)   # 13
+print(a * b)   # 30
+print(a / b)   # 3.333...
+```
+
+#### 🔹 Example 3: Type Conversion
+
+```python
+age = "25"
+age = int(age)
+print(age + 1)  # 26
+```
+
+---
+
+### ✅ 2. **Control Flow**
+
+#### 🔹 Example 1: If-Else
+
+```python
+num = 7
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+```
+
+#### 🔹 Example 2: For Loop
+
+```python
+for i in range(3):
+    print(f"Loop {i}")
+```
+
+#### 🔹 Example 3: While Loop with Break
+
+```python
+x = 0
+while True:
+    if x == 5:
+        break
+    print(x)
+    x += 1
+```
+
+---
+
+### ✅ 3. **Functions**
+
+#### 🔹 Example 1: Basic Function
+
+```python
+def greet(name):
+    return f"Hello, {name}"
+```
+
+#### 🔹 Example 2: Function with Default Argument
+
+```python
+def power(base, exp=2):
+    return base ** exp
+```
+
+#### 🔹 Example 3: Lambda Function
+
+```python
+square = lambda x: x ** 2
+print(square(4))  # 16
+```
+
+---
+
+### ✅ 4. **Data Structures**
+
+#### 🔹 Example 1: List Operations
+
+```python
+fruits = ["apple", "banana"]
+fruits.append("cherry")
+print(fruits[1])  # banana
+```
+
+#### 🔹 Example 2: Dictionary Lookup
+
+```python
+student = {"name": "Alice", "grade": 90}
+print(student["name"])  # Alice
+```
+
+#### 🔹 Example 3: Tuple and Set
+
+```python
+t = (1, 2, 3)
+s = {1, 2, 2, 3}
+print(t[0], s)  # 1 {1, 2, 3}
+```
+
+---
+
+
+## 🐍 extra: Python Notes
+
+---
+
+### 🔹 **1. Basics**
+
+```python
+# Print
+print("Hello, World!")
+
+# Variables
+x = 10
+name = "Alice"
+pi = 3.14
+is_valid = True
+
+# Data Types: int, float, str, bool, list, tuple, set, dict
+```
+
+---
+
+### 🔹 **2. Control Flow**
+
+```python
+# If-Else
+if x > 5:
+    print("Greater")
+else:
+    print("Smaller or Equal")
+
+# Loops
+for i in range(5):
+    print(i)
+
+while x > 0:
+    x -= 1
+```
+
+---
+
+### 🔹 **3. Functions**
+
+```python
+def greet(name):
+    return f"Hello, {name}"
+
+print(greet("Alice"))
+```
+
+---
+
+### 🔹 **4. Data Structures**
+
+#### 📌 List
+
+```python
+my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list[1])  # Output: 2
+```
+
+#### 📌 Tuple
+
+```python
+my_tuple = (1, 2, 3)
+```
+
+#### 📌 Set
+
+```python
+my_set = {1, 2, 3}
+my_set.add(4)
+```
+
+#### 📌 Dictionary
+
+```python
+my_dict = {"name": "Alice", "age": 25}
+print(my_dict["name"])
+```
+
+---
+
+### 🔹 **5. List Comprehension**
+
+```python
+squares = [x**2 for x in range(5)]  # [0, 1, 4, 9, 16]
+```
+
+---
+
+### 🔹 **6. File Handling**
+
+```python
+with open("data.txt", "r") as file:
+    content = file.read()
+```
+
+---
+
+### 🔹 **7. Exception Handling**
+
+```python
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+```
+
+---
+
+### 🔹 **8. Libraries for Data Science**
+
+#### 📊 NumPy
+
+```python
+import numpy as np
+arr = np.array([1, 2, 3])
+print(arr.mean())
+```
+
+#### 📈 Pandas
+
+```python
+import pandas as pd
+df = pd.read_csv("data.csv")
+print(df.head())
+```
+
+#### 📉 Matplotlib
+
+```python
+import matplotlib.pyplot as plt
+plt.plot([1, 2, 3], [4, 5, 6])
+plt.show()
+```
+
+#### 📊 Seaborn
+
+```python
+import seaborn as sns
+sns.heatmap(df.corr(), annot=True)
+```
+
+---
+
+### 🔹 **9. Object-Oriented Programming (OOP)**
+
+```python
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print(f"Hi, I'm {self.name}")
+
+p = Person("Alice")
+p.greet()
+```
+
+---
+
+### 🔹 **10. Virtual Environments (for projects)**
+
+```bash
+python -m venv myenv
+source myenv/bin/activate  # On Linux/macOS
+myenv\Scripts\activate     # On Windows
+```
+-----------------------------------------------
+
+## 🔬 Advanced Python for Data Science
+
+---
+
+### 🧠 5. **Machine Learning (scikit-learn)**
+
+#### 🔹 Example 1: Linear Regression
+
+```python
+from sklearn.linear_model import LinearRegression
+model = LinearRegression().fit([[1], [2]], [2, 4])
+print(model.coef_)  # [2.]
+```
+
+#### 🔹 Example 2: K-Nearest Neighbors
+
+```python
+from sklearn.neighbors import KNeighborsClassifier
+X = [[1, 2], [2, 3], [3, 4]]
+y = [0, 1, 1]
+knn = KNeighborsClassifier(n_neighbors=2)
+knn.fit(X, y)
+print(knn.predict([[2, 2]]))
+```
+
+#### 🔹 Example 3: Decision Tree Visualization
+
+```python
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+import matplotlib.pyplot as plt
+
+X = [[1, 1], [2, 0]]
+y = [0, 1]
+model = DecisionTreeClassifier().fit(X, y)
+plot_tree(model)
+plt.show()
+```
+
+---
+
+### 🌐 6. **APIs (requests module)**
+
+#### 🔹 Example 1: GET Request
+
+```python
+import requests
+response = requests.get("https://api.github.com")
+print(response.status_code)
+```
+
+#### 🔹 Example 2: JSON Response
+
+```python
+data = response.json()
+print(data["current_user_url"])
+```
+
+#### 🔹 Example 3: POST Request
+
+```python
+response = requests.post("https://httpbin.org/post", json={"key": "value"})
+print(response.json())
+```
+
+---
+
+### 🌍 7. **Web Scraping (BeautifulSoup)**
+
+#### 🔹 Example 1: Parse HTML
+
+```python
+from bs4 import BeautifulSoup
+html = "<html><h1>Title</h1></html>"
+soup = BeautifulSoup(html, "html.parser")
+print(soup.h1.text)
+```
+
+#### 🔹 Example 2: Scrape from URL
+
+```python
+import requests
+url = "https://example.com"
+page = requests.get(url)
+soup = BeautifulSoup(page.content, "html.parser")
+print(soup.title.text)
+```
+
+#### 🔹 Example 3: DOM Navigation
+
+```python
+div = soup.find("div", {"class": "content"})
+if div:
+    print(div.get_text())
+```
+
+---
